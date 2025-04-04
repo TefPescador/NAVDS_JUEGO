@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class CameraBehaviourCasa : MonoBehaviour
 {
-    public Vector3 CamOffSet = new Vector3(0f, -2f, 0f);
 
-    private Transform _target;
+    public float Velocidad = 100f;
+    float RotacionX = 0f;
+    public Transform Jugador;
 
     // Start is called before the first frame update
     void Start()
     {
-        _target = GameObject.Find("Prota").transform;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       float MouseX = Input.GetAxis("Mouse X") * Velocidad * Time.deltaTime;
+       float MouseY = Input.GetAxis("Mouse Y") * Velocidad * Time.deltaTime;
+
+       RotacionX -= MouseY;
+       RotacionX = Mathf.Clamp(RotacionX, -90f, 90f);
+
+       transform.localRotation = Quaternion.Euler(RotacionX, 0, 0);
+       Jugador.Rotate(Vector3.up * MouseX);
     }
 
-    void LateUpdate()
-    {
-        this.transform.position = _target.TransformPoint(CamOffSet);
-        this.transform.LookAt(_target);
-    }
+    
 }
