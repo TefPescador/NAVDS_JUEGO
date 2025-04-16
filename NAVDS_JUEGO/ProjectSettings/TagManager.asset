@@ -8,6 +8,26 @@ TagManager:
   - ObjetoInteractivo
   - Door
   - TriggerDoor
+  - Reloj
+  - Foto
+  - Baston
+  - Radio
+  - Libro
+  - Cepillo
+  - Medicamento
+  - Zapatos
+  - CepilloDientes
+  - Toalla
+  - Perfume
+  - Taza
+  - Sarten
+  - Receta
+  - Frutas
+  - Revistas
+  - Carta
+  - Telefono
+  - Control
+  - Sillon
   layers:
   - Default
   - TransparentFX
