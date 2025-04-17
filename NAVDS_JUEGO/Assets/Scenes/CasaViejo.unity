@@ -2670,6 +2670,23 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -23}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &885228550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8513424388201257645, guid: 451298840d6a45443be74ba338a86855, type: 3}
+  m_PrefabInstance: {fileID: 1205331098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &885228552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885228550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b45ba5e2573fb4bb43f3a4d59f1de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &898981383
 GameObject:
   m_ObjectHideFlags: 0
@@ -4574,6 +4591,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: -2336912909881668946, guid: 451298840d6a45443be74ba338a86855, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2336912909881668946, guid: 451298840d6a45443be74ba338a86855, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2250182829337569628, guid: 451298840d6a45443be74ba338a86855, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.62692696
@@ -4862,6 +4887,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.1166
       objectReference: {fileID: 0}
+    - target: {fileID: 8647142515598141207, guid: 451298840d6a45443be74ba338a86855, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0427
+      objectReference: {fileID: 0}
     - target: {fileID: 8897253434350016941, guid: 451298840d6a45443be74ba338a86855, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4901,6 +4930,9 @@ PrefabInstance:
       insertIndex: 85
       addedObject: {fileID: 559049775}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: 451298840d6a45443be74ba338a86855, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 885228552}
     - targetCorrespondingSourceObject: {fileID: 2458440423167879437, guid: 451298840d6a45443be74ba338a86855, type: 3}
       insertIndex: -1
       addedObject: {fileID: 818496854}
@@ -6812,7 +6844,7 @@ GameObject:
   - component: {fileID: 1776343735}
   m_Layer: 0
   m_Name: Jugador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
