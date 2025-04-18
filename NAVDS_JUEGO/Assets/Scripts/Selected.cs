@@ -33,6 +33,7 @@ public class Selected : MonoBehaviour
     public GameObject Telefono;
     public GameObject Control;
     public GameObject Sillon;
+    public GameObject Tele;
 
     //public GameObject Canvas;
     GameObject ultimoReconocido = null;
@@ -65,6 +66,7 @@ public class Selected : MonoBehaviour
         Telefono.SetActive(false);
         Control.SetActive(false);
         Sillon.SetActive(false);
+        Tele.SetActive(false);
         //Canvas.SetActive(false);
     }
 
@@ -78,7 +80,7 @@ public class Selected : MonoBehaviour
             Deselect();
             SelectedObject(hit.transform);
             
-            if((hit.collider.CompareTag("ObjetoInteractivo")) || (hit.collider.CompareTag("Door")) || (hit.collider.CompareTag("Reloj")) || (hit.collider.CompareTag("Baston")) || (hit.collider.CompareTag("Medicamento")) || (hit.collider.CompareTag("Foto")) || (hit.collider.CompareTag("Radio")) || (hit.collider.CompareTag("Cepillo")) || (hit.collider.CompareTag("Libro")) || (hit.collider.CompareTag("Zapatos")) || (hit.collider.CompareTag("CepilloDientes")) || (hit.collider.CompareTag("Perfume")) || (hit.collider.CompareTag("Toalla")) || (hit.collider.CompareTag("Taza")) || (hit.collider.CompareTag("Sarten")) || (hit.collider.CompareTag("Receta")) || (hit.collider.CompareTag("Frutas")) || (hit.collider.CompareTag("Revistas")) || (hit.collider.CompareTag("Carta")) || (hit.collider.CompareTag("Telefono")) || (hit.collider.CompareTag("Control")) || (hit.collider.CompareTag("Sillon")))
+            if((hit.collider.CompareTag("ObjetoInteractivo")) || (hit.collider.CompareTag("Door")) || (hit.collider.CompareTag("Reloj")) || (hit.collider.CompareTag("Baston")) || (hit.collider.CompareTag("Medicamento")) || (hit.collider.CompareTag("Foto")) || (hit.collider.CompareTag("Radio")) || (hit.collider.CompareTag("Cepillo")) || (hit.collider.CompareTag("Libro")) || (hit.collider.CompareTag("Zapatos")) || (hit.collider.CompareTag("CepilloDientes")) || (hit.collider.CompareTag("Perfume")) || (hit.collider.CompareTag("Toalla")) || (hit.collider.CompareTag("Taza")) || (hit.collider.CompareTag("Sarten")) || (hit.collider.CompareTag("Receta")) || (hit.collider.CompareTag("Frutas")) || (hit.collider.CompareTag("Revistas")) || (hit.collider.CompareTag("Carta")) || (hit.collider.CompareTag("Telefono")) || (hit.collider.CompareTag("Control")) || (hit.collider.CompareTag("Sillon")) || (hit.collider.CompareTag("Tele")))
             {
                 if(Input.GetKeyDown(KeyCode.E))
                 {
@@ -191,6 +193,11 @@ public class Selected : MonoBehaviour
                         Sillon.SetActive(true);
                         StartCoroutine("DesaparecerTexto");
                     }
+                    if (hit.collider.CompareTag("Tele"))
+                    {
+                        Tele.SetActive(true);
+                        StartCoroutine("DesaparecerTexto");
+                    }
                     //hit.collider.transform.GetComponent<ObjetoInterac>().ActivarObjeto();
                 }
             }
@@ -203,7 +210,7 @@ public class Selected : MonoBehaviour
 
     void SelectedObject(Transform transform)
     {
-        transform.GetComponent<MeshRenderer>().material.color = Color.green;
+        transform.GetComponent<MeshRenderer>().material.color = Color.red;
         ultimoReconocido = transform.gameObject;
     }
 
@@ -259,5 +266,6 @@ public class Selected : MonoBehaviour
         Telefono.SetActive(false);
         Control.SetActive(false);
         Sillon.SetActive(false);
+        Tele.SetActive(false);
     }
 }

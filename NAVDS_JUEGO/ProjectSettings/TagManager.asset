@@ -28,6 +28,7 @@ TagManager:
   - Telefono
   - Control
   - Sillon
+  - Tele
   layers:
   - Default
   - TransparentFX

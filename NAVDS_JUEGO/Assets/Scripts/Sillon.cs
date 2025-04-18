@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Sillon : MonoBehaviour
 {
+
+    public int pantalla;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(pantalla);
         }
     }
     // Start is called before the first frame update

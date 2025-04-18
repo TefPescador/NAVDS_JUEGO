@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private int suenos = 3;
     public Pared notasCom;
 
+    public SerotoninManager serotoninManager;
+
     void Awake()
     {
        if(Instance == null)
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
         if (suenos == 0)
         {
             SceneManager.LoadScene(1);
+            serotoninManager.OnLevelFailed();
         }
 
         hud.DesactivarSueno(suenos);
