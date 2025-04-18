@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: 02a28c5ecde132546a0b378a7fbcac59
+  - enabled: 1
+    path: Assets/Scenes/CasaViejo 1.unity
+    guid: 93394358b4996e944bbf52ca8ddf34e0
   m_configObjects: {}
