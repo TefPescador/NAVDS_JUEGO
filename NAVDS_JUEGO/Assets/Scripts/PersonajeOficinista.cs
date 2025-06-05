@@ -15,7 +15,7 @@ public class PersonajeOficinista : MonoBehaviour
 
     private Animator animator;
 
-
+    public static bool isInElevator = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,11 +42,11 @@ public class PersonajeOficinista : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && EstaEnSuelo())
         {
             rigidbody.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
-            //animator.SetBool("isJumping", true);
+            animator.SetBool("isJumping", true);
         }
         else
         {
-            //animator.SetBool("isJumping", false);
+            animator.SetBool("isJumping", false);
         }
     }
 

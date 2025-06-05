@@ -65,4 +65,9 @@ public class GameManager : MonoBehaviour
 
         hud.DesactivarSueno(suenos);
     }
+
+    public void GanarNivel()
+    {
+        serotoninManager.OnLevelWin();
+    }
 }

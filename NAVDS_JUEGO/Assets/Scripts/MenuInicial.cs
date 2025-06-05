@@ -8,6 +8,7 @@ public class MenuInicial : MonoBehaviour
    //Funcion para el botonInicio y empiece el juego
    public void Jugar()
     {
+        Serotonin.Instance.currentSerotonin = 50f;
         SceneManager.LoadScene(1);
     }
 
