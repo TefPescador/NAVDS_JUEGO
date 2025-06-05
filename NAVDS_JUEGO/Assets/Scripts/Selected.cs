@@ -35,6 +35,8 @@ public class Selected : MonoBehaviour
     public GameObject Sillon;
     public GameObject Tele;
 
+    public bool mostrarPuntero = true;
+
     //public GameObject Canvas;
     GameObject ultimoReconocido = null;
     
@@ -225,8 +227,12 @@ public class Selected : MonoBehaviour
 
     void OnGUI()
     {
-        Rect rect = new Rect(Screen.width / 2 - puntero.width / 2, Screen.height / 2 - puntero.height / 2, puntero.width, puntero.height);
-        GUI.DrawTexture(rect, puntero);
+        if (mostrarPuntero)
+        {
+            Rect rect = new Rect(Screen.width / 2 - puntero.width / 2, Screen.height / 2 - puntero.height / 2, puntero.width, puntero.height);
+            GUI.DrawTexture(rect, puntero);
+        }
+        
 
         if (ultimoReconocido)
         {

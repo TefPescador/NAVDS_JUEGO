@@ -37,7 +37,7 @@ public class Notas : MonoBehaviour
 
     IEnumerator DesaparecerNota()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         nota.SetActive(false);
         Destroy(this.gameObject);
     }
