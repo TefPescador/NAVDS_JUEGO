@@ -383,6 +383,7 @@
 "Assets/Scripts/ObjetoInterac.cs"
 "Assets/Scripts/PantallaCarga.cs"
 "Assets/Scripts/Pared.cs"
+"Assets/Scripts/PauseManager.cs"
 "Assets/Scripts/PersonajeControl.cs"
 "Assets/Scripts/PersonajeOficinista.cs"
 "Assets/Scripts/ProtaBehaviour.cs"

@@ -8168,7 +8168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSerotonin: 50
-  videoPlayer: {fileID: 166650887}
 --- !u!4 &1820577923
 Transform:
   m_ObjectHideFlags: 0

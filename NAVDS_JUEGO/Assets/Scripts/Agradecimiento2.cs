@@ -7,7 +7,7 @@ public class Agradecimiento2 : MonoBehaviour
 {
     public void Siguiente()
     {
-        SceneManager.LoadScene("UltimaCasa");
+        SceneManager.LoadScene(8);
     }
 
     // Start is called before the first frame update
