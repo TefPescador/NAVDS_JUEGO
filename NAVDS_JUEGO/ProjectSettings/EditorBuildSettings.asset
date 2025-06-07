@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SiguienteCasa.unity
     guid: fd06d10c53b129a4585f24d6251aeeba
+  - enabled: 1
+    path: Assets/Scenes/UltimaCasa.unity
+    guid: 465791660a0fe534ba0e5a170b373cc9
   m_configObjects: {}

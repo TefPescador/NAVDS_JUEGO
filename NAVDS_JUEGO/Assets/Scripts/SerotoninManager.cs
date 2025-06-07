@@ -4,11 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class SerotoninManager : MonoBehaviour
 {
     [SerializeField] private Slider serotoninBar;
 
-    public int gameOverScene;
+    int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+
+    private bool gameOverTriggered = false;
+
+    //public int gameOverScene;
 
     //public GameObject GameOver;
 
@@ -27,6 +33,7 @@ public class SerotoninManager : MonoBehaviour
         Serotonin.Instance.currentSerotonin -= 25f;
         Serotonin.Instance.currentSerotonin = Mathf.Clamp(Serotonin.Instance.currentSerotonin, 0, 100f);
         UpdateBar();
+        CheckSerotonin();
     }
 
     public void OnLevelWin()
@@ -34,14 +41,34 @@ public class SerotoninManager : MonoBehaviour
         Serotonin.Instance.currentSerotonin += 25f;
         Serotonin.Instance.currentSerotonin = Mathf.Clamp(Serotonin.Instance.currentSerotonin, 0, 100f);
         UpdateBar();
+        CheckSerotonin();
     }
 
     private void UpdateBar()
     {
         serotoninBar.value = Serotonin.Instance.currentSerotonin;
-        if (Serotonin.Instance.currentSerotonin == 0)
+    }
+
+    private void CheckSerotonin()
+    {
+        if (!gameOverTriggered && Serotonin.Instance.currentSerotonin <= 0)
         {
-            SceneManager.LoadScene(gameOverScene);
+            gameOverTriggered = true;
+
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            if (currentSceneIndex == 1 || currentSceneIndex == 2) // Suponiendo 0 = NivelNino
+            {
+                SceneManager.LoadScene(5);
+            }
+            else if (currentSceneIndex == 7 || currentSceneIndex == 4) // Suponiendo 1 = NivelNina
+            {
+                SceneManager.LoadScene(6);
+            }
+            else
+            {
+                Debug.LogWarning("Índice de escena no reconocido.");
+            }
         }
     }
 }
