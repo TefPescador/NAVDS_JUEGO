@@ -29,6 +29,7 @@ TagManager:
   - Control
   - Sillon
   - Tele
+  - Enemy
   layers:
   - Default
   - TransparentFX

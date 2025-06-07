@@ -5,9 +5,12 @@ using UnityEngine.Playables;
 
 public class Elevador : MonoBehaviour
 {
-    public GameObject elevatorUI; //panel con los botones
+    public GameObject elevatorUI; // Panel con los botones
     public Transform pisoSuperior;
+    public int pisoSuperiorNumero = 2;
+
     public Transform pisoInferior;
+    public int pisoInferiorNumero = 1;
 
     private GameObject jugadorActual;
 
@@ -20,6 +23,7 @@ public class Elevador : MonoBehaviour
             PersonajeOficinista.isInElevator = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -33,23 +37,27 @@ public class Elevador : MonoBehaviour
     public void Subir()
     {
         if (jugadorActual != null)
+        {
             jugadorActual.transform.position = pisoSuperior.position;
+
+            // Actualiza pisoActual
+            jugadorActual.GetComponent<PersonajeOficinista>().pisoActual = pisoSuperiorNumero;
+        }
     }
 
     public void Bajar()
     {
         if (jugadorActual != null)
+        {
             jugadorActual.transform.position = pisoInferior.position;
+
+            // Actualiza pisoActual
+            jugadorActual.GetComponent<PersonajeOficinista>().pisoActual = pisoInferiorNumero;
+        }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         elevatorUI.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
