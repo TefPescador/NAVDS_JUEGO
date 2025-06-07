@@ -9,13 +9,17 @@ public class PersonajeOficinista : MonoBehaviour
     public float saltosMaximos;
     public LayerMask capaSuelo;
 
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
     private BoxCollider2D boxCollider;
     private bool mirandoDerecha = true;
 
     private Animator animator;
 
     public static bool isInElevator = false;
+
+    public int pisoActual = 4;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -82,4 +86,13 @@ public class PersonajeOficinista : MonoBehaviour
 
 
     }
+
+    public void IrAlPiso(int nuevoPiso, Vector3 posicionDestino)
+    {
+        pisoActual = nuevoPiso;
+        transform.position = posicionDestino;
+    }
+
+    
+
 }
