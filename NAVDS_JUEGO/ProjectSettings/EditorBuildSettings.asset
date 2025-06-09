@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UltimaCasa.unity
     guid: 465791660a0fe534ba0e5a170b373cc9
+  - enabled: 1
+    path: Assets/Scenes/Nivel3.unity
+    guid: 8c2b4aa65053d824eb82b410c5077b4e
   m_configObjects: {}
