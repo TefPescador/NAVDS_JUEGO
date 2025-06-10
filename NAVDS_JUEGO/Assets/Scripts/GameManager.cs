@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
     public Pared notasCom;
 
     public SerotoninManager serotoninManager;
+
+    public Cronometro cronometro;
 
     void Awake()
     {
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
         if(notasTotales == notasFinales)
         {
             notasCom.NotasCompletas();
+            cronometro.DetenerCronometro();
         }
     }
     // Start is called before the first frame update
